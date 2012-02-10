@@ -5,7 +5,6 @@
 #
 # $ ruby heroku-sinatra-app.rb
 #
-require 'rubygems'
 require 'sinatra'
 
 # Quick test
