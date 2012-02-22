@@ -174,7 +174,7 @@ get '/profile/:username' do
 	end
 
 
-	@username = session[:user]
+	@username = @profile
 	@fname = REDIS.hget 'users:'+ @username, 'fname'
 	@lname = REDIS.hget 'users:'+ @username, 'lname'
 	@email = REDIS.hget 'users:'+ @username, 'email'
