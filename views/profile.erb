@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+    <link href="includes/main.css" rel="stylesheet" type="text/css" />
+    <title>This is <%= @profile %>'s profile page</title>
+  </head>
+  <body class="infopage">
+  <div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="sigin custom3">
+          <a href="logout" class="navItem plain">Log out</a>
+      </li>   
+  </ul>
+</div>
+
+<div id="info-content" class="custom9">	
+<div class = "logo-black">
+</div>
+  <%if @owner == "yes"%>
+  <!-- Display editing tools here-->
+  <% end %>
+	<p>This is where the users page information will be displayed.</p>
+	<table>
+	<tr><td>UserName</td>	<td><%= @username %></td></tr>
+	<%if @lname != nil and @fname != nil%>
+	<tr><td>Name</td>		<td><%= @fname %> <%= @lname %></td></tr>
+	<% end %>
+	<%if @email != nil%>
+	<tr><td>Email</td>		<td><%= @email %></td></tr>
+	<% end %>
+	<%if @biography != nil%>
+	<tr><td>Biography</td>	<td><%= @biography %></td></tr>
+	<% end %>
+	<%if @twitter != nil%>
+	<tr><td>Twitter</td>	<td><%= @twitter %></td></tr>
+	<% end %>
+	<%if @facebook != nil%>
+	<tr><td>Facebook</td>	<td><%= @facebook %></td></tr>
+	<% end %>
+	<%if @website != nil%>
+	<tr><td>Website</td>		<td><%= @website %></td></tr>
+	<% end %>
+	<%if @tags != nil%>
+	<tr><td>Tags</td>		<td><%= @tags %></td></tr>
+	<% end %>
+	
+	
+	</table>
+</div>
+  </body>
+</html>

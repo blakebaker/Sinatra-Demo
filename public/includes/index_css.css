@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+body.homepage{
+	background-color: #DDE5E7;
+	background-image: url(../images/templates/homepage-bg.gif);
+	background-repeat:repeat-x;
+}
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+    <link href="includes/main.css" rel="stylesheet" type="text/css" />
+  <title>Edit Profile</title></head>
+ <body class="infopage">
+  <div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="sigin custom3">
+          <a href="logout" class="navItem plain">Log out</a>
+      </li>   
+  </ul>
+</div>
+
+<div id="info-content" class="custom9">
+<div class = "logo-black">
+</div>
+  <h1>Edit your Information</h1> 
+  <font color=red><%= @message %></font><br>
+  <form method=POST>
+    <p>
+      <label>First Name:<br/></label> 
+      <input class="smalltext"  type=text size=50 name=fname value="<%= @fname %>" /></br>
+      <label>Last Name:<br/></label> 
+      <input class="smalltext"  type=text size=50 name=lname value="<%= @lname %>" /></br>
+      <label>Email:<br/></label>
+      <input class="smalltext"  type=text size=50 name=email value="<%= @email %>" /></br>
+      <label>Biography:<br/></label> 
+      <textarea name="biography" cols="40" rows="7"><%= @biography %></textarea>
+      <br>
+      <label>Twitter Link: http://twitter.com/<br/></label>
+      <input class="smalltext"  type=text size=50 name=twitter value="<%= @twitter %>" />
+      </br>
+      <label>Facebook Link: http://facebook.com/<br/></label>
+      <input class="smalltext"  type=text size=50 name=facebook value="<%= @facebook %>" /></br>
+      <label>Website:<br/></label> 
+      <input class="smalltext"  type=text size=50 name=website value="<%= @website %>" /></br>
+      <label>Tags:<br/></label>	
+      <input class="smalltext"  type=text size=50 name=tags value="<%= @tags %>" /></br></br>
+      <input type="submit"/>
+    </p>
+  </form>
+ </div>
+  </body>
+  </html>

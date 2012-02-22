@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+    <link href="includes/main.css" rel="stylesheet" type="text/css" />
+  <title>Change Password</title></head>
+<body class="infopage">
+  <div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="sigin custom3">
+          <a href="logout" class="navItem plain">Log out</a>
+      </li>   
+  </ul>
+</div>
+<div id="info-content" class="custom9">
+<div class = "logo-black">
+</div>
+  <font color=red><%= @message %></font><br>
+  <form method=POST>
+  <label>Current Password:</br></label> 
+  <input class="smalltext" type=password size=50 name=pass value="<%= @pass %>" /></br>
+  <label>New Password:</br></label> 
+  <input class="smalltext" type=password size=50 name=newpass value="<%= @newpass %>" /></br>
+   <label>Verify New Password:</br></label> 
+   <input class="smalltext" type=password size=50 name=verify_new_pass value="<%= @verify_new_pass %>" /></br>
+  <input type="submit"/>
+  </form>
+  </div>
+  </body>
+  </html>

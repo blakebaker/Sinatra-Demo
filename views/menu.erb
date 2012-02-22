@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+    <link href="includes/main.css" rel="stylesheet" type="text/css" />
+    <title><%= @username %>'s Menu Page</title>
+  </head>
+  <body class="infopage">
+  <div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="sigin custom3">
+          <a href="logout" class="navItem plain">Log out</a>
+      </li>   
+  </ul>
+</div>
+
+<div id="info-content" class="custom9">
+<div class = "logo-black">
+</div>		
+		<h1>Choices</h1>
+		<a href="/profile/<%= @username %>">View Profile</a><br>
+		<a href="/edit/<%= @username %>">Edit Profile</a><br>
+		<a href="/changepass">Change Password</a><br>
+		<a href="/logout">Logout</a>
+</div>	
+  </body>
+</html>

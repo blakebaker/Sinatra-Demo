@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Cabin|Bonbon|Rosario:400,700|Righteous' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="includes/index_css.css" rel="stylesheet" type="text/css" />
+<link href="includes/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body class= "homepage">
+<div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="profilethumb custom3">
+      Already have a profile?
+          <a href="index" class="navItem plain custom3">Log in</a>
+      </li>   
+  </ul>
+</div>
+<div id="content" class="custom3">
+  <div class="row">
+    <div class="left">
+        <div class="home-banner">
+          <div class="logo"></div>
+          <h2 class="caps bannertext">
+          A Personal page
+          <br/>
+          that is all about you
+          </h2>
+        </div>
+      <div class="signupform">
+        <p>
+        <p class="caption">Create Account<p>
+        <p class ="form-description">Here is where you will register for an account.</p>
+		<% if @error == "pass" %>
+
+			<p class="form-errormsg">The passwords didn't match. Please reenter the information</p>
+		<% elsif @error == "user" %>
+			<p class="form-errormsg">That user already exsists. Please choose a new one</p>
+		<% elsif @error == "email" %>
+			<p class ="form-errormsg">That email is already in use. Please select a different one or login using exsisting</p>
+		<% end %>		
+        </p>
+        <form method=POST>
+        <fieldset>
+        <label>Username: </label>
+        <input type="text" class="smalltext"  size=50 name="username" value="<% @username %>" />
+        </fieldset>
+		<fieldset>
+		<label>First Name: </label>
+        <input type="text" class="smalltext" size=50 name=fname value="<% @fname %>" />
+        </fieldset>
+        <fieldset>
+        <label>Last Name: </label>
+		<input type="text" class="smalltext" size=50 name=lname value="<% @lname %>" />
+        </fieldset>
+
+        
+        <fieldset>
+        <label>Email: </label>
+        <input type="text" class="smalltext" size=50 name=email value="<% @email %>" />
+        </fieldset>
+		 
+        <fieldset>
+        <label>Password: </label>
+        <input type="password" class="smalltext" size=50 name=password1 />
+        </fieldset>
+		 
+        <fieldset class="lastfieldset">
+        <label>Verify Password: </label>
+        <input type="password" class="smalltext" size=50 name=password2 />
+        </fieldset>
+		<button class = "button button-default" type="submit">
+        <span class="button-content custom7">Create Your Profile</span>
+        </button>
+        
+		</form>
+      </div>
+    </div>
+    <div class="homepage-advertise">
+    	
+        <span class = "thumb">
+            <span class="thumb-wrap">
+            <img class="profilethumb" src="images/templates/indeximage1.png">
+            </span>
+        </span>
+        <span class = "disclaimer">
+        <p class="disclaimercaption">
+        Disclaimer:
+        </p>
+        <p class="disclaimertext">This site will not be used for any commercial purpose.
+        </p>
+        </span>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>

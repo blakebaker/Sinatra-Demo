@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+<link href="includes/main.css" rel="stylesheet" type="text/css" />
+    <title>Group One's Awesome Page</title>
+  </head>
+ 
+  <body class="infopage">
+<div id= "header-background"></div>
+<div id="header-wrap">
+  <ul class="nav accountlink" > 
+      <li class="signin custom3">
+      Already have a profile?
+      <a href="index" class="navItem plain">Log in</a>
+      </li>   
+  </ul>
+</div>
+
+<div id="info-content" class="custom9">
+<div class = "logo-black">
+</div>
+  <h1>Team One's Sinatra Project</h1>
+		<% if @validUser == "no" %>
+			<p class="form-errormsg">That is not a valid username and password combination. Please reenter the information</p>
+		<% else  %>
+			<p> </p>
+		<% end %>
+	<p class="form-description">This where you will either login or create a new account.</p>
+	<div class="loginform">
+        <form method=POST>
+       	<fieldset>
+        <label>Username: <br/></label> 
+        <input type="text" class="smalltext"  size=50 name="username" />
+        </fieldset>
+        <fieldset> 
+        <label>Password: <br/></label>
+        <input type="password" class="smalltext"  size=50 name="password" />
+        </fieldset>
+            <input type="submit"/>
+        </form>
+    </div>
+    
+	<h2><a href="/create">Create New Account</a></h2>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+#info-content
+{
+	width: 500px;
+	margin: auto;
+}
+body.infopage{
+	background-color: #DDE5E7;
+}
+.logo-black{
+	background-image:url(../images/templates/logo2.png);
+	background-repeat: no-repeat;
+	width: 297px;
+	height:76px;
+	margin-bottom: 20px;
+}
