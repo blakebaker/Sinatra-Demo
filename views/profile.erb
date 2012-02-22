@@ -25,48 +25,52 @@
   <% end %>
 
   <fieldset>
-       <label>UserName</label> <%= @username %>
+       <label style="font-size: large">UserName</label><br /> <%= @username %>
    </fieldset>
-
        <%if @lname != nil and @fname != nil%>
        <fieldset>
-       <label>Name</label><%= @fname %> <%= @lname %>
+       <label style="font-size: large">Name</label><br /><%= @fname %> <%= @lname %>
     </fieldset>
        <% end %>
 
        <%if @email != nil and @email != " "%>
        <fieldset>
-       <label>Email</label><%= @email %>
+       <label style="font-size: large">Email</label><br /><%= @email %>
     </fieldset>
        <% end %>
 
        <%if @biography != nil and @biography != " "%>
        <fieldset>
-       <label>Biography</label><%= @biography %>
+       <label style="font-size: large">Biography</label><br /><%= @biography %>
     </fieldset>
        <% end %>
 
        <%if @twitter != nil and @twitter != " "%>
        <fieldset>
-       <label>Twitter</label><%= @twitter %>
+       <label style="font-size: large">Twitter</label><br />
+    
+    <a href="https://twitter.com/<%= @twitter %>" class="twitter-follow-button" data-show-count="false">Follow @<%= @twitter %></a>
+<script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+    
+   
     </fieldset>
        <% end %>
 
        <%if @facebook != nil and @facebook != " "%>
        <fieldset>
-       <label>Facebook</label><a href= "www.facebook.com/<%= @facebook %>">Facebook</a>
+       <a href= "http://www.facebook.com/<%= @facebook %>" style="font-size: large">Facebook</a>
     </fieldset>
        <% end %>
 
        <%if @website != nil and @website != " "%>
        <fieldset>
-       <label>Website</label> <%= @website %>
+       <label style="font-size: large">Website</label><br /> <%= @website %>
     </fieldset>
        <% end %>
 
        <%if @tags != nil and @tags != " "%>
        <fieldset>
-       <label>Tags </label><%= @tags %>
+       <label style="font-size: large">Tags </label><br /><%= @tags %>
     </fieldset>
        <% end %>
         
