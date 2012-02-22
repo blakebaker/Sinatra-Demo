@@ -167,8 +167,8 @@ get '/profile/:username' do
 
 	#trying to set a profile name from the url
 	@profile = params[:username]
-
-	#What the
+	erb :profile
+	
 	if @profile == session[:user]
 		@logged = 1
 	end
