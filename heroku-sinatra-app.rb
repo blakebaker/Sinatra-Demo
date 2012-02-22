@@ -171,7 +171,6 @@ get '/profile/:username' do
 
 	if @profile == session[:user]
 		#THEY ARE THE USER
-		@owner = "yes"
 	end
 
 
