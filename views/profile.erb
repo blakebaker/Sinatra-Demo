@@ -17,40 +17,60 @@
   </ul>
 </div>
 
-<div id="info-content" class="custom9">	
+<div id="info-content" class="custom9">  
 <div class = "logo-black">
 </div>
   <%if @owner == "yes"%>
   <!-- Display editing tools here-->
   <% end %>
 
-	<table>
-       <tr><td>UserName</td>      <td><%= @username %></td></tr>
+  <fieldset>
+       <label>UserName</label> <%= @username %>
+   </fieldset>
+
        <%if @lname != nil and @fname != nil%>
-       <tr><td>Name</td>          <td><%= @fname %> <%= @lname %></td></tr>
+       <fieldset>
+       <label>Name</label><%= @fname %> <%= @lname %>
+    </fieldset>
        <% end %>
+
        <%if @email != nil and @email != " "%>
-       <tr><td>Email</td>         <td><%= @email %></td></tr>
+       <fieldset>
+       <label>Email</label><%= @email %>
+    </fieldset>
        <% end %>
+
        <%if @biography != nil and @biography != " "%>
-       <tr><td>Biography</td>     <td><%= @biography %></td></tr>
+       <fieldset>
+       <label>Biography</label><%= @biography %>
+    </fieldset>
        <% end %>
+
        <%if @twitter != nil and @twitter != " "%>
-       <tr><td>Twitter</td> <td><%= @twitter %></td></tr>
+       <fieldset>
+       <label>Twitter</label><%= @twitter %>
+    </fieldset>
        <% end %>
+
        <%if @facebook != nil and @facebook != " "%>
-       <tr><td>Facebook</td>      <td><%= @facebook %></td></tr>
+       <fieldset>
+       <label>Facebook</label><a href= "www.facebook.com/<%= @facebook %>">Facebook</a>
+    </fieldset>
        <% end %>
+
        <%if @website != nil and @website != " "%>
-       <tr><td>Website</td>       <td><%= @website %></td></tr>
+       <fieldset>
+       <label>Website</label> <%= @website %>
+    </fieldset>
        <% end %>
+
        <%if @tags != nil and @tags != " "%>
-       <tr><td>Tags</td>          <td><%= @tags %></td></tr>
+       <fieldset>
+       <label>Tags </label><%= @tags %>
+    </fieldset>
        <% end %>
-       </table> 
-	
-	
-	</table>
+        
 </div>
   </body>
 </html>
+
