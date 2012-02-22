@@ -173,20 +173,20 @@ get '/profile/:username' do
 		@logged = 1
 	end
 
-if REDIS.exists('users:'+ @profile)
-	@username = @profile
-	@fname = REDIS.hget 'users:'+ @username, 'fname'
-	@lname = REDIS.hget 'users:'+ @username, 'lname'
-	@email = REDIS.hget 'users:'+ @username, 'email'
-	@biography = REDIS.hget 'users:'+ @username, 'biography'
-	@twitter = REDIS.hget 'users:'+ @username, 'twitter'
-	@facebook = REDIS.hget 'users:'+ @username, 'facebook'
-	@website = REDIS.hget 'users:'+ @username, 'website'
-	@tags = REDIS.hget 'users:'+ @username, 'tags'
+	if REDIS.exists('users:'+ @profile)
+		@username = @profile
+		@fname = REDIS.hget 'users:'+ @username, 'fname'
+		@lname = REDIS.hget 'users:'+ @username, 'lname'
+		@email = REDIS.hget 'users:'+ @username, 'email'
+		@biography = REDIS.hget 'users:'+ @username, 'biography'
+		@twitter = REDIS.hget 'users:'+ @username, 'twitter'
+		@facebook = REDIS.hget 'users:'+ @username, 'facebook'
+		@website = REDIS.hget 'users:'+ @username, 'website'
+		@tags = REDIS.hget 'users:'+ @username, 'tags'
 
-Else 
+	elsif 
          redirect '/index'
-end
+	end
 
 	erb :profile
 end
