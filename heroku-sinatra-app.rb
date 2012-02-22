@@ -173,7 +173,7 @@ get '/profile/:username' do
 		@logged = 1
 	end
 
-
+if REDIS.exists('users:'+ @profile)
 	@username = @profile
 	@fname = REDIS.hget 'users:'+ @username, 'fname'
 	@lname = REDIS.hget 'users:'+ @username, 'lname'
@@ -183,6 +183,10 @@ get '/profile/:username' do
 	@facebook = REDIS.hget 'users:'+ @username, 'facebook'
 	@website = REDIS.hget 'users:'+ @username, 'website'
 	@tags = REDIS.hget 'users:'+ @username, 'tags'
+
+Else 
+         redirect '/index'
+end
 
 	erb :profile
 end
@@ -358,6 +362,6 @@ not_found do
 
 	#--------------Start Code-------------------
 	"Page doesn't exsist redirecting to homepage."
-	redirect 'localhost:/4567/index'
+	redirect '/index'
 end
 
