@@ -168,27 +168,7 @@ get '/profile/:username' do
 	#trying to set a profile name from the url
 	@profile = params[:username]
 	erb :profile
-	
-	if @profile == session[:user]
-		@logged = 1
-	end
 
-	if REDIS.exists('users:'+ @profile)
-		@username = @profile
-		@fname = REDIS.hget 'users:'+ @username, 'fname'
-		@lname = REDIS.hget 'users:'+ @username, 'lname'
-		@email = REDIS.hget 'users:'+ @username, 'email'
-		@biography = REDIS.hget 'users:'+ @username, 'biography'
-		@twitter = REDIS.hget 'users:'+ @username, 'twitter'
-		@facebook = REDIS.hget 'users:'+ @username, 'facebook'
-		@website = REDIS.hget 'users:'+ @username, 'website'
-		@tags = REDIS.hget 'users:'+ @username, 'tags'
-
-	elsif 
-         redirect '/index'
-	end
-
-	erb :profile
 end
 
 
