@@ -11,12 +11,12 @@
   <div id= "header-background"></div>
 <div id="header-wrap">
   <ul class="nav accountlink" > 
+<%if @Logged == 1%>
       <li class="sigin custom3">
-	<%if @Logged == 1%>
    		<a href="/logout" class="navItem plain">Log out</a>
-	<% end %>
       </li>   
   </ul>
+<% end %>
 </div>
 
 <div id="info-content" class="custom9">	
