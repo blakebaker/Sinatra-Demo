@@ -18,7 +18,7 @@
   </ul>
 <% end %>
 </div>
-<% if REDIS.exists('users:'+ @profile) %>
+<% if REDIS.exists('users:'+ @username) %>
 <div id="info-content" class="custom9">	
 	<p>This is where the users page information will be displayed.</p>
 	<table>
