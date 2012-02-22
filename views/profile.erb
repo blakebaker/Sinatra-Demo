@@ -7,12 +7,14 @@
     <link href="includes/main.css" rel="stylesheet" type="text/css" />
     <title>This is <%= @profile %>'s profile page</title>
   </head>
-  <body class="infopage">
+  <body class="homepage">
   <div id= "header-background"></div>
 <div id="header-wrap">
   <ul class="nav accountlink" > 
       <li class="sigin custom3">
-          <a href="/logout" class="navItem plain">Log out</a>
+	<%if @Logged == 1%>
+   		<a href="/logout" class="navItem plain">Log out</a>
+	<% end %>
       </li>   
   </ul>
 </div>

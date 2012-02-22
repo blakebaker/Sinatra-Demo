@@ -170,7 +170,7 @@ get '/profile/:username' do
 	puts @profile
 
 	if @profile == session[:user]
-		#THEY ARE THE USER
+		@logged = 1
 	end
 
 
