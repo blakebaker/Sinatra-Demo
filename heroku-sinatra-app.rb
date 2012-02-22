@@ -337,3 +337,27 @@ post '/changepass' do
 
 end
 
+get '/logout' do
+	#--------------What it does-------------------
+	#Name: Logout
+	#
+	# Sets the session[:user] to nil
+
+	#--------------Start Code-------------------
+	session[:user] = nil
+	redirect '/index'
+end
+
+
+
+not_found do
+    #--------------What it does-------------------
+	#Name: Page Not Found
+	# Redirects user to the homepage when the user tries to access a page that
+	#does not exsist
+
+	#--------------Start Code-------------------
+	"Page doesn't exsist redirecting to homepage."
+	redirect 'localhost:/4567/index'
+end
+
