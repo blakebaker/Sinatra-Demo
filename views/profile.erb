@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-<link href='http://fonts.googleapis.com/css?family=Cabin|Bonbon|Rosario:400,700|Righteous' rel='stylesheet' type='text/css'> 
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="http://sinatracpsc473.heroku.com/includes/login_css.css" rel="stylesheet" type="text/css" />
-    <link href="http://sinatracpsc473.heroku.com/includes/main.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link href="includes/login_css.css" rel="stylesheet" type="text/css" />
+    <link href="includes/main.css" rel="stylesheet" type="text/css" />
     <title>This is <%= @profile %>'s profile page</title>
   </head>
-  <body class="homepage">
+  <body class="infopage">
   <div id= "header-background"></div>
 <div id="header-wrap">
   <ul class="nav accountlink" > 
-<%if @Logged == 1%>
       <li class="sigin custom3">
-                 <a href="/logout" class="navItem plain">Log out</a>
+          <a href="logout" class="navItem plain">Log out</a>
       </li>   
   </ul>
-<% end %>
 </div>
 
-<div id="info-content" class="custom9">     
-         <p>This is where the users page information will be displayed.</p>
-         
-<table>
+<div id="info-content" class="custom9">	
+<div class = "logo-black">
+</div>
+  <%if @owner == "yes"%>
+  <!-- Display editing tools here-->
+  <% end %>
+       <p>This is where the users page information will be displayed.</p>
+	<table>
        <tr><td>UserName</td>      <td><%= @username %></td></tr>
        <%if @lname != nil and @fname != nil%>
        <tr><td>Name</td>          <td><%= @fname %> <%= @lname %></td></tr>
@@ -46,7 +49,9 @@
        <tr><td>Tags</td>          <td><%= @tags %></td></tr>
        <% end %>
        </table> 
-
+	
+	
+	</table>
 </div>
   </body>
 </html>
