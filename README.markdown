@@ -15,3 +15,6 @@ http://devcenter.heroku.com/articles/rack
 http://ruby.railstutorial.org/chapters/a-demo-app#top
 
 https://github.com/sinatra/heroku-sinatra-app
+
+Font and CSS
+http://fonts.googleapis.com
